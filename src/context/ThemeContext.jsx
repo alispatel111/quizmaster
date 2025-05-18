@@ -12,12 +12,9 @@ export const ThemeProvider = ({ children }) => {
   useEffect(() => {
     // Check for saved theme preference or use system preference
     const savedTheme = localStorage.getItem("quizTheme")
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
 
     if (savedTheme) {
       setIsDarkMode(savedTheme === "dark")
-    } else if (prefersDark) {
-      setIsDarkMode(true)
     }
   }, [])
 
