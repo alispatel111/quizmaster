@@ -1,0 +1,242 @@
+.leaderboard-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.leaderboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.back-button {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all var(--transition-speed) var(--transition-timing);
+}
+
+.back-button:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.empty-leaderboard {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.trophy-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.empty-leaderboard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.empty-leaderboard p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.start-quiz-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  display: inline-block;
+  transition: all var(--transition-speed) var(--transition-timing);
+}
+
+.start-quiz-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.leaderboard-content {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.leaderboard-table-container {
+  overflow-x: auto;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboard-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.leaderboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.leaderboard-row:hover {
+  background-color: var(--bg-secondary);
+}
+
+.leaderboard-row.top-1 {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.leaderboard-row.top-2 {
+  background-color: rgba(107, 114, 128, 0.1);
+}
+
+.leaderboard-row.top-3 {
+  background-color: rgba(180, 83, 9, 0.1);
+}
+
+.rank-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rank-icon {
+  font-size: 1.25rem;
+}
+
+.rank-number {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--bg-tertiary);
+  font-size: 0.75rem;
+}
+
+.name-cell {
+  font-weight: 500;
+}
+
+.score-cell {
+  font-weight: 600;
+}
+
+.score-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  background-color: rgba(79, 70, 229, 0.1);
+  color: var(--primary-color);
+  font-size: 0.875rem;
+}
+
+.category-cell {
+  color: var(--text-secondary);
+}
+
+.difficulty-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.difficulty-badge.easy {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+}
+
+.difficulty-badge.medium {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.difficulty-badge.hard {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+.date-cell {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.leaderboard-info {
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+}
+
+.leaderboard-info p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .leaderboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .back-button {
+    width: 100%;
+  }
+
+  .leaderboard-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-container {
+    padding: 1rem;
+  }
+
+  .leaderboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .empty-leaderboard {
+    padding: 2rem 1rem;
+  }
+
+  .trophy-icon {
+    font-size: 3rem;
+  }
+
+  .empty-leaderboard h2 {
+    font-size: 1.25rem;
+  }
+}

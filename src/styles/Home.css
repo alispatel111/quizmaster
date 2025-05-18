@@ -1,0 +1,144 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 10rem);
+}
+
+.home-content {
+  max-width: 800px;
+  width: 100%;
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.home-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.home-form {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  cursor: auto;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group input,
+.form-group select {
+  cursor: pointer;
+  width: 100%;
+}
+
+.form-group input.error {
+  border-color: var(--danger-color);
+}
+
+.error-message {
+  color: var(--danger-color);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.start-button {
+  width: 100%;
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition-speed) var(--transition-timing);
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-md);
+}
+
+.home-features {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 2rem;
+}
+
+.home-features h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.features-list {
+  list-style-position: inside;
+  padding-left: 1rem;
+}
+
+.features-list li {
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.features-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .home-content {
+    padding: 1.5rem;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content {
+    padding: 1.25rem;
+  }
+
+  .home-title {
+    font-size: 1.75rem;
+  }
+
+  .features-list li {
+    font-size: 0.9rem;
+  }
+}
